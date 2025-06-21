@@ -13,7 +13,7 @@ def load_markdown_documents(folder_path):
         if filename.endswith(".md"):
             loader = TextLoader(os.path.join(folder_path, filename), encoding='utf-8')
             docs.extend(loader.load())
-    print(f"📄 加载完成：{len(docs)} 个 Markdown 文档")
+    print(f" 加载完成：{len(docs)} 个 Markdown 文档")
     return docs
 
 
@@ -43,11 +43,11 @@ def main():
 
     
     while True:
-        query = input("\n❓请输入问题（exit 退出）：")
+        query = input("\n请输入问题（exit 退出）：")
         if query.lower() in ['exit', 'quit']:
             break
         result = qa.run(query)
-        print(f"✅ 答案：{result}")
+        print(f" 答案：{result}")
 
 if __name__ == "__main__":
     main()
